@@ -26,7 +26,7 @@ Tickets
 
 0. Ask the facility to provide an excel sheet with the matching of the agent metadata and the custom id they want for the same agent. 
 	Acceptance criteria :- Excel sheet is provided by each of the facility.
-	Time/effort :- This task can done in parallel with other tasks and needed by step 3.
+	Time/effort :- This task can done in parallel with other tasks and needed by step 3. This task requires communicating with all the facilities via email or other comm means and asking them for a reponse in excel sheet. 
 
 1. Create a db for the custom id to database id matching. It will contain 3 columns, facility id, agent id and the custom id for agent for that facility with primary key being the facility id and agent id. Create an ORM and DAO object for the same. 
 	Acceptance criteria :- The db has been created in all the env instances. The ORM for the db is done. Passes basic fetch and set test for db
