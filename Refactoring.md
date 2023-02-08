@@ -14,3 +14,4 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 2. Create a separate function for the hashing function since it used multiple times
 3. Rename the variable candidate as candidateKey for readability
 4. exports the function for testing. 
+5. Adds test cases to explore all the paths the code can take in different sceanrios. i.e If we explore the code path in the graph, all the lead nodes have been covered.
