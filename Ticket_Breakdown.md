@@ -17,3 +17,25 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
+Assumptions:
+
+1. Facilities, Agents, and Shifts are SQL table
+2. The same agent can work for multiple facilities.
+
+Tickets
+
+0. Ask the facility to provide an excel sheet with the matching of the agent metadata and the custom id they want for the same agent. 
+	Acceptance criteria :- Excel sheet is provided by each of the facility.
+	Time/effort :- This task can done in parallel with other tasks and needed by step 3.
+
+1. Create a db for the custom id to database id matching. It will contain 3 columns, facility id, agent id and the custom id for agent for that facility with primary key being the facility id and agent id. Create an ORM and DAO object for the same. 
+	Acceptance criteria :- The db has been created in all the env instances. The ORM for the db is done. Passes basic fetch and set test for db
+	Time/effort :- 1 week SWE job including implementation and testing. 
+
+2. Create a custom script which takes the data from the facility in excel sheet and update the db. This can be done with a fake data. 
+	Acceptance criteria :- The script works in the non prod envs. It takes the data from the fake excel sheet and fills the database created in step 1.
+	Time/effort :- 2 days SWE job including implementation and testing. 
+
+3. Update the generateReport API to have the custom id in the response. For this step generateReport is updated to fetch the custom id. In the getShiftsByFacility when we are fetching the shifts with the agent's metadata, we use the metadata and the facility id to fetch the custom id of the agent. Update the JSON/Prooto response and the PDF.
+	Acceptance criteria :- generateReport returns the custom id for the agents for the facility
+	Time/effort :- 2 week SWE job including implementation and testing. 
